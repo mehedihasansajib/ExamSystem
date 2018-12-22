@@ -314,7 +314,6 @@ public class Home extends JFrame {
 	}
 	public void fload()  
 	{
-		//form load//
 		score=questionAttempted=correctAttempts=wrongAttempts=totalMarks=achivedMarks=0;correctAns=-1;
 		totalQuestions=negtiveMarks=marksForEach=currentQno=0;ss=60;chk=false;
 		try
@@ -325,7 +324,7 @@ public class Home extends JFrame {
          ResultSet rs = st.executeQuery("Select exam_name from  exam_setup order by exam_name");
          examCombo.removeAllItems();
          examCombo.addItem("");
-         stdNameText.setText("");//test();
+         stdNameText.setText("");
          emailText.setText("");
          while (rs.next())
             {
@@ -337,7 +336,7 @@ public class Home extends JFrame {
               System.err.print("Exception: ");
               System.err.println(ex.getMessage());
         }
-	}//end of fload();
+	}
 	public boolean onSubmit()
 	{
 		try
@@ -598,7 +597,7 @@ public class Home extends JFrame {
 		}
 	}
 	
-	public void progress()//calculating marks and stuff
+	public void progress()
 	{	
 		try
 		{		
