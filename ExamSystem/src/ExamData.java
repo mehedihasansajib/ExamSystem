@@ -45,7 +45,6 @@ public class ExamData {
 		if(!condtion.equals(sblank))
 			condtion=" Where "+condtion;
 		String sql="select "+cols+" from "+table+"  "+condtion+"";
-		//System.out.println(sql);
 		try
 		{
 			rs=st.executeQuery(sql);
@@ -58,7 +57,7 @@ public class ExamData {
 		}
 		return rs;
 	}
-	//select_cols ends here 
+
 	public void insertData(String cols,String table,String values)
 	{
 		
